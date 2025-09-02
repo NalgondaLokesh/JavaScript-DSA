@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <input type="text" id="cookieValue" placeholder="Enter cookie value">
+    <button onclick="setCookie()">Set cookie</button>
+    <button onclick="getCookie()">Get cookie</button>
+    <button onclick="deleteCookie()">Delete cookie</button>
+    <h1 id="cookie"></h1>
+
+    <script>
+        function setCookie(){
+            let value = document.getElementById("cookieValue").value;
+            document.cookie = "username=" + value + "; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/";
+            alert("Cookie set: " + value);
+        }
+
+        function deleteCookie(){
+            document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+            alert("Cookie deleted");
+        }
+
+        function getCookie(){
+            let x = document.cookie;
+            document.getElementById("cookie").innerHTML = "Stored cookies: " + x;
+        }
+    </script>
+</body>
+</html>

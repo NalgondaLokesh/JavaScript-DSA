@@ -1,0 +1,24 @@
+body{
+    background-color:#f4f4f4;
+    font-weight: 700;
+    align-items: center;
+}
+
+h1{
+    font-style: bold;
+    align-items: center;
+    text-shadow: 1px;
+    font-weight: 700px;
+}
+p{
+    padding: 1px;
+    margin: 1px;
+    border: 1px;
+    border-radius: 1px;
+
+}
+
+footer{
+    text-align:center;
+}
+

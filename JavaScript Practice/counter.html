@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice sheet1</title>
+</head>
+<body>
+    <button onclick="countIncrement()">Count increase</button>
+    <button onclick="countDecrement()">Count decrease</button>
+    <h1 id="count">Count : 0</h1>
+    <script>
+        let count = 0;
+        function countIncrement(){
+            count++;
+            document.getElementById("count").innerHTML = "Count : "+count;
+        }
+
+        function countDecrement(){
+            count--;
+            document.getElementById("count").innerHTML = "Count : "+count;
+        }
+    </script>
+</body>
+</html>

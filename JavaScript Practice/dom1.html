@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation 1</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <h1 id="addText"></h1>
+    <button onclick="popUp()">Click!</button>
+    <button onclick="addText()">Adding text on button click</button>
+    <button onclick="changeBodyColor()">Change Body color</button>
+    <script>
+        document.getElementById("demo").innerHTML = "Hello Everyone!";
+
+        function addText(){
+            document.getElementById("addText").innerHTML = "This text is added by JavaScript";
+        }
+
+        function popUp(){
+            alert("You clicked the button!");
+        }
+
+        function changeBodyColor(){
+            document.body.style.backgroundColor = "cyan";
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <p>Promises are used to perform asyncronous events</p>
+    <script>
+        function prepareFood(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve("food is prepared");
+            },3000);
+        });
+            
+        }
+        function eatFood(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve("food is eaten");
+            },2000);
+            });
+            
+        }
+        function gotoschool(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve("go is school");
+            },1500);
+            });
+            
+        }
+
+        prepareFood().then((value)=>{
+            console.log(value);
+            return eatFood();
+        }).then((value)=>{
+            console.log(value);
+            return gotoschool();
+        }).then((value)=>{
+            console.log(value);
+            console.log("all promises are resolved");
+        });
+
+
+
+    </script>
+</body>
+</html>

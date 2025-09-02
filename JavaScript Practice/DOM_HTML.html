@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM HTML</title>
+</head>
+<body>
+    <p>Remove content on clicking button</p>
+    <h1 id="p1">Hello World!</h1>
+    <h1 id="p2">Namasthe!</h1>
+    <button onclick="removeone()">Remove content</button>
+    <button onclick="removeboth()">Remove both</button>
+
+    <script>
+        function removeone(){
+            document.getElementById("p1").remove();
+        }
+        function removeboth(){
+            document.getElementById("p2").remove();
+            document.getElementById("p1").remove();   
+        }
+    </script>
+
+</body>
+</html>
