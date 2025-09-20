@@ -6,13 +6,22 @@
     <title>Fetch API</title>
 </head>
 <body>
+    <h1 id="setup"></h1>
+    <h2 id="punchline"></h2>
+    <button onclick="fetchData()">Click</button>
     <script>
-        const url = "https://cat-fact.herku.app.com/facts";
-
-        const getFacts = async()=>{
-            console.log("geting data...");
-            let response = await fetch(url);
-            console.log(response);
+        async function fetchData(){
+            try{
+                let response = await fetch("https://official-joke-api.appspot.com/jokes/random/");
+                let data = await response.json();
+                console.log(data);
+                document.getElementById("setup").innerHTML = data.setup;
+                document.getElementById("punchline").innerHTML = data.punchline;
+                
+            }
+            catch(error){
+                console.log(error);
+            }
         }
     </script>
 </body>

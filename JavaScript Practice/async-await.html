@@ -34,17 +34,18 @@
 
         async function asynAwait(){
             try{
-            const food = await prepareFood();
-            console.log(food);
+                const food = await prepareFood();
+                console.log(food);
 
-            const eat = await eatFood();
-            console.log(eat);
+                const eat = await eatFood();
+                console.log(eat);
 
-            const school = await gotoschool();
-            console.log(school);
-        }catch(error){
-            console.log(error);
-        }
+                const school = await gotoschool();
+                console.log(school);
+            }
+            catch(error){
+                console.log(error);
+            }
         }
         asynAwait();
     </script>
